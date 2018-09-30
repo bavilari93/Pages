@@ -12,7 +12,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 5fr 1fr;
-  grid-template-areas: "header header " "left right " "footer footer"; }
+  grid-template-areas: "header header " "left right " "footer1 footer"; }
 
 .navbar {
   grid-area: header;
@@ -28,12 +28,12 @@ body {
 span {
   color: #cc0033; }
 
-.navigation {
+#navigation {
   width: 60%;
   display: flex;
   justify-content: center;
   align-content: center; }
-  .navigation a {
+  #navigation a {
     margin-top: .5rem;
     text-align: center;
     text-decoration: none;
@@ -41,26 +41,58 @@ span {
     margin-left: 1.4rem;
     font-size: 1rem; }
 
-.about {
+.left {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   grid-area: left;
   margin-left: 4rem; }
-  .about h1 {
+  .left h1 {
     text-align: center;
     font-size: 5rem;
     font-weight: 800;
     letter-spacing: .4rem;
     line-height: 4rem; }
-  .about h3 {
+  .left h3 {
     margin-top: 2rem;
     font-size: .9rem;
     font-weight: 100; }
-  .about h2 {
+  .left h2 {
     margin-top: 2rem;
     font-size: 2rem;
     font-weight: 500; }
+
+.right {
+  grid-area: right;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-aligh: center;
+  margin-left: 1rem; }
+
+.home {
+  display: none; }
+
+.about {
+  display: none; }
+
+.portafolio {
+  display: none; }
+
+.contact {
+  display: none; }
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  grid-area: footer1;
+  height: 2.6rem; }
+  .social img {
+    margin-left: 2rem;
+    height: 2rem;
+    width: auto;
+    filter: brightness(0) invert(1); }
 
 /*# sourceMappingURL=style.css.map */

@@ -22,7 +22,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 5fr 1fr;
-    grid-template-areas: "header header " "left right " "footer footer"
+    grid-template-areas: "header header " "left right " "footer1 footer"
 }
 
 .navbar {
@@ -40,7 +40,7 @@ span {
     color: $pink;
 }
 
-.navigation {
+#navigation {
     width: 60%;
     @include flex;
     a {
@@ -54,7 +54,7 @@ span {
 }
 
 
-.about {
+.left {
     @include flex;
     flex-direction: column;
     grid-area: left;
@@ -77,4 +77,33 @@ span {
         font-size: 2rem;
         font-weight: 500;
     }
+}
+.right{
+    grid-area: right;
+	@include flex;
+	text-aligh: center;
+	margin-left: 1rem;
+}
+.home{
+    display:none;
+}
+.about{
+    display:none; 
+}
+.portafolio{
+    display:none; 
+}
+.contact{
+  display:none;  
+}
+.social{
+	@include flex;
+	grid-area:footer1; 
+	height: 2.6rem;
+	img{
+	margin-left: 2rem;
+	height:2rem;
+	width: auto;
+	filter: brightness(0) invert(1);
+	}
 }
