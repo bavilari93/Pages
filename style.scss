@@ -21,7 +21,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 5fr 1fr;
     grid-template-areas: "header header " "left right " "footer1 footer"
 }
@@ -74,55 +74,72 @@ span {
         font-size: .9rem;
         font-weight: 100;
     }
-    h2{
-    margin-top: 2rem;
+    h2 {
+        margin-top: 2rem;
         font-size: 2rem;
         font-weight: 500;
     }
 }
-.right{
+
+.right {
     grid-area: right;
-	@include flex;
-	text-aligh: center;
-	margin-left: 1rem;
-    width: 70%; 
-    height:100%; 
-}
-.home{
-    display:flex;
-}
-.about{
-    display:none; 
-    flex-direction: column;
-}
-.portafolio{
-    display:none; 
-}
-.contact{
-  display:none;  
-}
-.social{
-	@include flex;
-	grid-area:footer1; 
-	height: 2.6rem;
-	img{
-	margin-left: 2rem;
-	height:2rem;
-	width: auto;
-	filter: brightness(0) invert(1);
-	}
+    @include flex;
+    text-aligh: center;
+    margin-left: 5rem;
+    width: 70%;
+    height: 100%;
 }
 
-.circle{
+.home {
+    display: flex;
+}
+
+.about {
+    display: none;
+    flex-direction: column;
+}
+
+.portafolio {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 80%;
+    .circle {
+        margin-left: 1rem;
+        &:hover {
+            width:8rem;
+            height:8rem;
+        }
+    }
+}
+
+.contact {
+    display: none;
+}
+
+.social {
+    @include flex;
+    grid-area: footer1;
+    height: 2.6rem;
+    img {
+        margin-left: 2rem;
+        height: 2rem;
+        width: auto;
+        filter: brightness(0) invert(1);
+    }
+}
+
+.circle {
     margin: 0 auto;
-    width:7rem;
-    height: 7rem; 
-    background: $grey; 
-    border-radius: 100%; 
+    width: 7rem;
+    height: 7rem;
+    background: $grey;
+    border-radius: 100%;
     margin-top: 2rem;
 }
-.about-content{
+
+.about-content {
     margin-top: 3rem;
-    width:100%;
-    text-align: center;  
+    width: 100%;
+    text-align: center;
 }

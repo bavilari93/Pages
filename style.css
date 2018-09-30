@@ -10,7 +10,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 5fr 1fr;
   grid-template-areas: "header header " "left right " "footer1 footer"; }
 
@@ -70,7 +70,7 @@ span {
   justify-content: center;
   align-content: center;
   text-aligh: center;
-  margin-left: 1rem;
+  margin-left: 5rem;
   width: 70%;
   height: 100%; }
 
@@ -82,7 +82,15 @@ span {
   flex-direction: column; }
 
 .portafolio {
-  display: none; }
+  display: none;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 80%; }
+  .portafolio .circle {
+    margin-left: 1rem; }
+    .portafolio .circle:hover {
+      width: 8rem;
+      height: 8rem; }
 
 .contact {
   display: none; }
