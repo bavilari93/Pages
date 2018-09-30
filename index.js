@@ -10,14 +10,13 @@ window.onload = (() => {
 
 })
 
-
-function viewRender(name) {
+const viewRender = ((name)=> {
     var renderChoice = ['home', 'about', 'portafolio', 'contact'];
-    renderChoice.forEach((e, index) => {
+    renderChoice.forEach((e) => {
         name === e ?
             document.querySelector(`.${name}`).style.display = "flex" :
             document.querySelector(`.${e}`).style.display = "none"
 
 
     })
-}
+})
